@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg bg-dark text-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">School</a>
+      <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" *ngFor="let list of list ;let i = index">
+          <a class="nav-link active text-light"  aria-current="page" href="#" [routerLink]="list.link">{{list.label}}</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
