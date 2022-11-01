@@ -8,7 +8,7 @@ import { TableService } from '../table.service';
 })
 export class StudentsComponent implements OnInit {
   product: any = []
-list: any;
+   list!: any;
 
   constructor(private service: TableService,) { }
 

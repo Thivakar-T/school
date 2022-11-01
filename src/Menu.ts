@@ -11,10 +11,16 @@ export const MENU: MenuItem[] = [
         link: '/dashboard', 
     },   
     {
-        id: 2,
+        id: 3,
         label: 'STUDENTS',
         link: '/students', 
     },
+    {
+        id: 4,
+        label: 'Studentlist',
+        link: '/studentlist', 
+    },
+    
 ];
 
 

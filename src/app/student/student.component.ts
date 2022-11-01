@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms';
-import { StudentService } from '../student.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { WorkerService } from '../workerservice.service';
 
 @Component({
   selector: 'app-student',
@@ -17,7 +17,7 @@ export class StudentComponent implements OnInit {
 
  
   constructor(private fb:FormBuilder,
-    private studentService:StudentService,
+    private ws:WorkerService,
     private route:ActivatedRoute,
     private router:Router
 
@@ -30,16 +30,16 @@ export class StudentComponent implements OnInit {
       id:[''],
       firstName:['',Validators.required],
       age:['',Validators.required],
+      fatherName:['',Validators.required],
+
     })
-    this.studentService.getstudent().subscribe(
-      res => {
-        console.log(res)
-      })
+    
 
-
-    this.paramId = this.route.snapshot.params['id'];
+    this.paramId = this.route.snapshot.params['data'];
     console.log(this.paramId)
-    this.getId();
+    if(this.paramId){
+      this.getId()
+    }
   }
   get f() {return this.StudentForm.controls;
   
@@ -50,16 +50,17 @@ export class StudentComponent implements OnInit {
       return;
     }
     console.log(this.StudentForm.value.id)
+    
     if (this.paramId) {
       this.StudentForm.value.id = this.paramId
-      this.studentService.updatestudent(this.StudentForm.value, this.paramId).subscribe(
+      this.ws.updatestudent(this.StudentForm.value, this.paramId).subscribe(
         res => {
           console.log(res)
-          this.router.navigate(['/studentist']);
+          this.router.navigate(['/studentlist']);
         })
     }
     else {
-      this.studentService.createstudent(this.StudentForm.value).subscribe(
+      this.ws.createstudent(this.StudentForm.value).subscribe(
         res => {
           console.log(res)
           this.router.navigate(['/studentlist']);
@@ -67,7 +68,7 @@ export class StudentComponent implements OnInit {
     }
   }
   getId() {
-    this.studentService.getstudentid(this.paramId).subscribe(
+    this.ws.getstudentid(this.paramId).subscribe(
       res => {
         console.log(res)
         this.obj = res

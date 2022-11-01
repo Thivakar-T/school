@@ -1,33 +1,42 @@
-<div class="card-2">
-    <div class="card-body">
-      <table id="empRequestlist" class="table table-bordered" style="width:100%">
-  
-        <thead>
-          <tr>
-            <th>S.No</th>
-            <th>FirstName</th>
-            <th>Age</th>
-            <th>Action</th>
+<div class="row">
+  <div class="col text-end me-5">
+    <button type="button" class="mt-5 btn btn-outline-secondary " routerLink="/Student">Student</button>
+  </div>
+</div>
+
+
+<div class=" mt-5 card-2">
+  <div class="card-body">
+    <table id="empRequestlist" class="table table-bordered" style="width:100%">
+
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>FirstName</th>
+          <th>FatherName</th>
+          <th>Age</th>
+          <th>Action</th>
 
 
 
         </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let list of product ;let i = index">
-            <td>{{i+1}}</td>
-            <td>{{list.firstName}}</td>
-            <td>{{list.age}}</td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of product ;let i = index">
+          <td>{{i+1}}</td>
+          <td>{{list.firstName}}</td>
+          <td>{{list.fatherName}}</td>
+          <td>{{list.age}}</td>
 
-            <td>
-  
-                <button type="button" 
-                class="btn btn-success btn-sm mr-2"> <a routerLink='/StudentForm/{{list.id}}'>Accept </a></button>
-            <button type="button" (click)="reject(list.id)"
-                class="btn btn-danger btn-sm">Reject</button>
+
+          <td>
+
+            <button type="button" class="btn btn-success btn-sm mr-2"> <a routerLink='/Student/{{list.id}}'>Edit
+              </a></button>
+            <button type="button" (click)="reject(list.id)" class="btn btn-danger btn-sm">Delete</button>
           </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

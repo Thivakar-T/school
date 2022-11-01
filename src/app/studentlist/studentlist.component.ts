@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../student.service';
 import { Router ,ActivatedRoute,Route} from '@angular/router';
+import { WorkerService } from '../workerservice.service';
 
 
 @Component({
@@ -11,8 +11,7 @@ import { Router ,ActivatedRoute,Route} from '@angular/router';
 export class StudentlistComponent implements OnInit {
   product:any
 
-
-  constructor(private ds:StudentService,
+  constructor(private ws:WorkerService,
     private router:Router,
     private activatedroute:ActivatedRoute,
     ) { }
@@ -22,14 +21,14 @@ export class StudentlistComponent implements OnInit {
 
   }
   get(){
-    this.ds.getstudent().subscribe(
+    this.ws.getstudent().subscribe(
       res => {
         console.log(res)
         this.product=res
       })
   }
   reject(id:any){
-    this.ds.deletestudent(id).subscribe(
+    this.ws.deletestudent(id).subscribe(
       res => {
         this.get()
       })
