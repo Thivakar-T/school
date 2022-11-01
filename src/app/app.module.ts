@@ -13,6 +13,9 @@ import { StudentlistComponent } from './studentlist/studentlist.component';
 import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentsComponent } from './students/students.component';
+import { FormComponent } from './form/form.component';
+import { ManageComponent } from './manage/manage.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { StudentsComponent } from './students/students.component';
     StudentlistComponent,
     ListComponent,
     StudentsComponent,
+    FormComponent,
+    ManageComponent,
+
   ],
   imports: [
     BrowserModule,
