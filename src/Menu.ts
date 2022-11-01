@@ -10,8 +10,16 @@ export const MENU: MenuItem[] = [
         label: 'Pagelist',
         link: '/pagelist', 
     },
-   
-
+   {
+    id: 3,
+        label: 'About',
+        link: '/dashboard', 
+    },   
+    {
+        id: 4,
+        label: 'STUDENTS',
+        link: '/students', 
+    },
 ];
 
 
