@@ -3,16 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentComponent } from './student/student.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
-
-
+import { ListComponent } from './list/list.component';
+import { StudentsComponent } from './students/students.component';
 
 
 const routes: Routes = [
   {path:"",component:DashboardComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"Student",component:StudentComponent},
-  {path:"Studentlist",component:StudentlistComponent}
-
+  {path:"Studentlist",component:StudentlistComponent},
+  {path:"list",component:ListComponent},
+  {path:"list/:data",component:ListComponent},
+  {path:"students",component:StudentsComponent}
 ];
 
 @NgModule({

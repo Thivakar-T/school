@@ -10,14 +10,19 @@ import { NavbarComponent } from './../layout/navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentComponent } from './student/student.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
+import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentsComponent } from './students/students.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     DashboardComponent,
     StudentComponent,
-    StudentlistComponent
+    StudentlistComponent,
+    ListComponent,
+    StudentsComponent,
   ],
   imports: [
     BrowserModule,
