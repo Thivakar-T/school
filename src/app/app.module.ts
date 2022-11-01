@@ -10,7 +10,7 @@ import { NavbarComponent } from './../layout/navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentComponent } from './student/student.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { StudentlistComponent } from './studentlist/studentlist.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
