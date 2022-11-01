@@ -29,10 +29,10 @@ export class StudentlistComponent implements OnInit {
       })
   }
   reject(id:any){
-    this.ds.deletestudent(id).subscribe(
-      res => {
-        this.get()
-      })
+    // this.ds.deletestudent(id).subscribe(
+    //   res => {
+    //     this.get()
+    //   })
   }
 
 }
