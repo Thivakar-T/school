@@ -1,0 +1,43 @@
+
+<div class="container text-end mt-5">
+    <div class="row">
+        <div class="col">
+          <button type="submit" routerLink="/school" style="background-color:rgba(235, 120, 13, 0.884) ;"
+              class="btn fs-6 text-white mb-3  mt-4">Add Student</button>
+          </div>
+      </div>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>S. No</th>
+            <th>FirstName</th>
+            <th>FatherName</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>contact</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of product ;let i = index">
+            <td>{{i+1}}</td>
+             <td>{{list.firstName}}</td>
+            <td>{{list.fatherName}}</td>
+            <td>{{list.gender}}</td>
+            <td>{{list.age}}</td>
+            <td>{{list.contact}}</td>
+            <td>{{list.address}}</td>
+ 
+ 
+            <td>
+                 <button type="button" 
+                    class="btn btn-success mx-2 btn-sm mr-2"><a class="text-white" routerLink='/school/{{list.id}}'>Accept </a> </button>
+                 <button type="button" (click)="reject(list.id)"
+                    class="btn mx-2 btn-danger btn-sm">Reject</button> 
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    
+    

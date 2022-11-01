@@ -5,7 +5,12 @@ export const MENU: MenuItem[] = [
         label: 'Dashboard',
         link: '/dashboard', 
     },
-
+   
+    {
+        id: 2,
+        label: 'Home',
+        link: '/table', 
+    },
 ];
 
 
