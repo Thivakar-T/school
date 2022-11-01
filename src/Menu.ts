@@ -3,20 +3,32 @@ export const MENU: MenuItem[] = [
     {
         id: 1,
         label: 'Dashboard',
-        link: '/dashboard', 
+        link: '/dashboard',
     },
+
     {
         id: 2,
+        label: 'Home',
+        link: '/table'
+    },
+    {
+        id: 3,
+        label: 'Pagelist',
+        link: '/pagelist',
+    },
+    {
+        id: 4,
         label: 'About',
-        link: '/dashboard', 
-    },   
+        link: '/dashboard',
+    },
     {
         id: 8,
         label: 'Table',
-        link: '/manage', 
+        link: '/manage',
+    },
+    {
+        id: 5,
+        label: 'STUDENTS',
+        link: '/students',
     },
 ];
-
-
-
-

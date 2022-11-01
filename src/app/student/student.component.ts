@@ -52,11 +52,11 @@ export class StudentComponent implements OnInit {
     console.log(this.StudentForm.value.id)
     if (this.paramId) {
       this.StudentForm.value.id = this.paramId
-      this.studentService.updatestudent(this.StudentForm.value, this.paramId).subscribe(
-        res => {
-          console.log(res)
-          this.router.navigate(['/studentist']);
-        })
+      // this.studentService.updatestudent(this.StudentForm.value, this.paramId).subscribe(
+      //   res => {
+      //     console.log(res)
+      //     this.router.navigate(['/studentist']);
+      //   })
     }
     else {
       this.studentService.createstudent(this.StudentForm.value).subscribe(

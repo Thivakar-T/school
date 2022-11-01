@@ -1,41 +1,30 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-
+import{HttpClient} from '@angular/common/http';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
-  private baseurl = 'https://635ce214cb6cf98e56a7c605.mockapi.io/Student'
+  private url= 'https://634e4aa7f34e1ed826877cda.mockapi.io/student';
 
-
-  constructor(
-    private http: HttpClient
-  ) { }
-
-
-  createstudent(data: any) {
-    return this.http.post<any>(this.baseurl, data)
-
+  constructor(private http:HttpClient) { }
+  
+  createstudent(data:any){
+    return this.http.post<any>(this.url,data)
   }
-  getstudent() {
-    return this.http.get<any>(this.baseurl)
-
+  
+  getstudent(){
+    return this.http.get<any>(this.url)
   }
-  public getstudentid(id: any) {
-    return this.http.get<any>(this.baseurl + '/' + id);
-
+  editstudent(data:any,id:any){
+    return this.http.put<any>(this.url+"/"+id,data);
   }
-  updatestudent(data: any, id: any) {
-    return this.http.put<any>(this.baseurl + '/' + id, data);
+  getstudentid(id:any){
+    return this.http.get<any>(this.url+"/"+id);
   }
-
-
-  deletestudent(id: any) {
-    return this.http.delete<any>(this.baseurl + '/' + id);
-
+  delstudent(id:any){
+    return this.http.delete<any>(this.url+"/"+id)
   }
 }
 
