@@ -12,11 +12,16 @@ export const MENU: MenuItem[] = [
         link: '/table'}, 
     {
         id: 3,
+        label: 'Pagelist',
+        link: '/pagelist', 
+    },
+   {
+    id: 4,
         label: 'About',
         link: '/dashboard', 
     },   
     {
-        id: 4,
+        id: 5,
         label: 'STUDENTS',
         link: '/students', 
     },

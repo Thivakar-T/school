@@ -1,0 +1,95 @@
+<div class="container mt-5">
+  <form class=" mt-5 mb-5 " [formGroup]="pageForm" (ngSubmit)="onSubmit()">
+    <div class="row ">
+      <div class="col">
+        <p class="fs-5">FirstName:</p>
+        <input type="text" class="form-control" formControlName="firstName" placeholder="Enter Your First Name"
+          id="firstName" [(ngModel)]="obj.firstName"
+          [ngClass]="{ 'is-invalid': Submitted && f['firstName'].errors || f['firstName'].touched&& f['firstName'].errors }" />
+        <div *ngIf="Submitted && f['firstName'].errors|| f['firstName'].touched&& f['firstName'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['firstName'].errors['required']">First Name is required
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <p class="fs-5">FatherName:</p>
+        <input type="text" class="form-control" formControlName="fatherName" placeholder="Enter Your fatherName"
+          id="fatherName" [(ngModel)]="obj.fatherName"
+          [ngClass]="{ 'is-invalid': Submitted && f['fatherName'].errors || f['fatherName'].touched&& f['fatherName'].errors }" />
+        <div *ngIf="Submitted && f['fatherName'].errors|| f['fatherName'].touched&& f['fatherName'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['fatherName'].errors['required']">Father Name is required
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <p class="fs-5">Gender:</p>
+        <select class="form-select" formControlName="gender" id="gender" [(ngModel)]="obj.gender"
+          [ngClass]="{ 'is-invalid': Submitted && f['gender'].errors || f['gender'].touched&& f['gender'].errors }">
+
+          <option value="">choose</option>
+          <option value="Female">Female</option>
+          <option value="male">Male</option>
+        </select>
+        <div *ngIf="Submitted && f['gender'].errors|| f['gender'].touched&& f['gender'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['gender'].errors['required']">Gender is required
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <p class="fs-5">Age:</p>
+        <input type="number" class="form-control" formControlName="age" placeholder="Enter Your Age" id="age"
+          [(ngModel)]="obj.age"
+          [ngClass]="{ 'is-invalid': Submitted && f['age'].errors || f['age'].touched&& f['age'].errors }">
+        <div *ngIf="Submitted && f['age'].errors|| f['age'].touched&& f['age'].errors" class="invalid-feedback">
+          <div *ngIf="f['age'].errors['required']">Age is required
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <p class="fs-5"> Phonenumber:</p>
+        <input type="number" class="form-control" formControlName="phoneNumber" placeholder="Enter Your Phonenumber"
+          id="phoneNumber" [(ngModel)]="obj.phoneNumber"
+          [ngClass]="{ 'is-invalid': Submitted && f['phoneNumber'].errors || f['phoneNumber'].touched&& f['phoneNumber'].errors }">
+        <div *ngIf="Submitted && f['phoneNumber'].errors|| f['phoneNumber'].touched&& f['phoneNumber'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['phoneNumber'].errors['required']">Phone Number is required
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="col">
+        <p class="fs-5">Address:</p>
+        <input type="text" class="form-control" formControlName="address" placeholder="Enter Your Address" id="address"
+          [(ngModel)]="obj.address"
+          [ngClass]="{ 'is-invalid': Submitted && f['address'].errors || f['address'].touched&& f['address'].errors }">
+        <div *ngIf="Submitted && f['address'].errors|| f['address'].touched&& f['address'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['address'].errors['required']">Address is required
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class=" mt-5 col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
