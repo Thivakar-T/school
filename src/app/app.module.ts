@@ -9,9 +9,12 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './../layout/navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
-
 import { SchoolComponent } from './school/school.component';
 import {HttpClientModule } from '@angular/common/http';
+import { StudentComponent } from './student/student.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
+import { ListComponent } from './list/list.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import {HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     TableComponent,
     SchoolComponent,
-    
+    StudentComponent,
+    StudentlistComponent,
+    ListComponent,
+    StudentsComponent,
   ],
   imports: [
     BrowserModule,
